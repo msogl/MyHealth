@@ -338,6 +338,7 @@ label.input-error {
 	background-color: var(--primary);
 	color: White;
 	white-space: nowrap;
+  margin-bottom: 2em;
 }
 
 #menu-wrapper {

@@ -15,7 +15,7 @@ if (_session('loggedin') != '' && _session('login_state') == LoginState::LOGGED_
 ?>
 	<div id="menubar">
 		<a href="#" class="mobile"><i class="fa fa-bars"></i></a>
-		<div id="menu-wrapper" class="mb-2">
+		<div id="menu-wrapper">
 			<ul>
 				<li><a href="index">Home</a></li>
 				<li><a href="my-claims">Claims</a></li>
