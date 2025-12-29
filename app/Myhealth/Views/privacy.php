@@ -4,3 +4,4 @@
         <?php echo ReadTemplate("privacy_policy.html") ?>
     </div>
 </div>
+<script src="<?=_asset('js/views/Privacy.js')?>"></script>

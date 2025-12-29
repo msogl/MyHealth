@@ -459,6 +459,18 @@ progress.strong::-moz-progress-bar {background-color:green;}
   border-radius: 5px;
 }
 
+#gpc-current-value {
+  font-weight: bold;
+}
+
+#gpc-current-value.on {
+  color: #080;
+}
+
+#gpc-current-value.off {
+  color: #f00;
+}
+
 @media only screen and (min-width: 921px)
 {
 	#main-container {

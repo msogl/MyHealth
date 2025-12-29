@@ -8,7 +8,10 @@ const GPC = {
 
   init: function() {
     this.initEvents();
-    this.uspFramework.optOut = ((navigator.globalPrivacyControl && navigator.globalPrivacyControl === 1) ? 'Y' : 'N');
+
+    if (typeof navigator.globalPrivacyControl !== 'undefined') {
+      this.uspFramework.optOut = (navigator.globalPrivacyControl ? 'Y' : 'N');
+    }
   },
 
   initEvents: function() {
@@ -22,7 +25,7 @@ const GPC = {
 
     document.getElementById('gpc').addEventListener('click', function(e) {
       window.__uspapi('getUSPData', 1, (uspString, something) => {
-        console.debug('Do Not Track =', uspString)
+        //console.debug('Do Not Track =', uspString)
       });
       alert(`Your browser is indicating a desire for privacy with a Global Privacy Control signal (also known as Do Not Track). We do not collect data for marketing purposes, so nothing to worry about there.`);
 
