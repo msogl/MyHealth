@@ -38,6 +38,10 @@ function VIS(string $immunization): string
 		$docs = "vis-varicella.pdf|vis-varicella_espanol.pdf";
 	}
 
+    if ($docs == '') {
+        return '';
+    }
+
 	$arr = explode('|', $docs);
     $links = [];
 
