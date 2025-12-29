@@ -12,7 +12,9 @@ class Route
 
     private function __construct()
     {
-        //
+        if (!isset($_ENV['ROUTEDEBUG'])) {
+            $_ENV['ROUTEDEBUG'] = false;
+        }
     }
     
     private static function getInstance()
