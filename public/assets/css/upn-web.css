@@ -1,0 +1,567 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, san-serif;
+}
+
+body {
+	font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, san-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: Black;
+	background-color: White;
+	width: 100%;
+	height: 100%;
+}
+
+h2 {
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 1em;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #003366;
+	text-align: center;
+}
+
+#wrapouter {
+	width: 100%;
+	height: 100%;
+}
+
+#wrapinner {
+}
+
+#content {
+}
+
+/* ****************************************************
+ * Header
+ **************************************************** */
+#header {
+	position: relative;
+	width: 100%;
+	background-color: #87CEDB;
+}
+
+#header #logo {
+	float: left;
+}
+
+#header #headerlinks {
+	position: absolute;
+	text-align: right;
+	font-size: 8pt;
+	right: 1em;
+	bottom: 0;
+	padding-bottom: .5em;
+}
+
+#header #shadow, #shadow {
+	height: 47px;
+	background: url(images/header_shadow.gif) repeat-x;
+}
+
+.welcome {
+	font-weight: bold;
+	font-style: italic;
+	color: #003366;
+}
+
+/* ****************************************************
+ * Common elements
+ **************************************************** */
+
+a:link		{ color: #003366; text-decoration: underline; }
+a:visited	{ color: #003366; text-decoration: underline; }
+a:hover		{ color: #A2B1BF; text-decoration: none; }
+a:active	{ color: #003366; text-decoration: underline; }
+
+.button,
+.button2 {
+	margin-right: -2px;
+	font-size: 10pt;
+	padding: 3px;
+	border: 1px solid #003366;
+	cursor: pointer;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.button2 {
+	font-size: 8pt;
+}
+
+.submit {
+	padding-top: .5em;
+	text-align: right;
+}
+
+.loginbutton {
+	padding-top: .5em;
+}
+
+.submit input,
+.loginbutton input {
+	color: White !important;
+	background: #003366 url(images/button-grad.gif) repeat-x scroll left top;
+	width: 80px;
+}
+
+.loginbutton input {
+	width: 120px;
+}
+
+.submit input:hover,
+.loginbutton input:hover {
+	border-color: #0055aa !important;
+}
+
+.submit input:active,
+.loginbutton input:active {
+	background: #0055aa url(images/button-grad-active.gif) repeat-x scroll left top;
+}
+
+.error {
+	color: Red;
+	font-size: 8pt;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* ****************************************************
+ * Login page
+ **************************************************** */
+
+#loginboxleftouter {
+	position: absolute;
+	right: 50%;
+	margin: 0 4em 0 0;
+	width: 330px;
+}
+
+#loginboxrightouter {
+	position: absolute;
+	left: 50%;
+	margin: 0 0 0 4em;
+	width: 330px;
+}
+
+#loginboxright {
+	border: 1px solid #a9a9a9;
+	padding: 1em;
+}
+
+#loginboxleft, #insurancehelp {
+	background-color: #cfcfcf;
+}
+
+
+#loginboxtitle,
+#changepasswordtitle {
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 1em;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #003366;
+	text-align: center;
+}
+
+#changepasswordbox,
+#myaccountbox,
+#contactbox {
+	border: 1px solid #a9a9a9;
+	width: 300px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+#contactbox {
+	width: 450px;
+}
+
+#loginboxleft p,
+#insurancehelp p,
+#loginboxright p,
+#changepasswordbox p,
+#myaccountbox p,
+#contactbox p {
+	padding-bottom: .5em;
+	color: #464646;
+}
+
+#loginboxleft p,
+#insurancehelp p {
+	padding: .5em 1em;
+}
+
+#loginboxleft ol {
+	padding: .5em 1em;
+	margin-left: 2em;
+	color: #464646;
+}
+
+#loginboxleft p.instructions,
+#loginboxright p.instructions,
+#insurancehelp p.insrutions {
+	padding-bottom: 2em;
+}
+
+#loginboxleft p label
+#loginboxright p label,
+#changepasswordbox p label,
+#myaccountbox p label
+#contactbox p label {
+	color: #464646;
+}
+
+#loginboxleft p label a,
+#loginboxright p label a {
+	font-size: 8pt;
+}
+
+#insurancehelp select {
+	width: 300px;
+	color: #464646;
+	font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, san-serif;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+#membercard {
+	text-align: center;
+	visibility: hidden;
+	display: none;
+}
+
+#loginlinks {
+	width: 300px;
+	padding: 1em;
+	margin: 0 auto;
+	font-size: 8pt;
+	text-align: center;
+	color: #a9a9a9;
+}
+
+.logintext,
+.changepasswordtext,
+.myaccounttext,
+.contacttext {
+	border: 1px solid #a9a9a9;
+	font-size: 10pt;
+	font-weight: normal;
+	color: Black;
+	width: 292px;
+	padding: 4px;
+}
+
+.contacttext {
+	width: 441px;
+}
+
+/* ****************************************************
+ * Register box
+ **************************************************** */
+
+	
+#registerbox,
+#resetpasswordbox {
+	border: 1px solid #a9a9a9;
+	width: 300px;
+	margin: 0 auto;
+	padding: 1em 1em 0 1em;
+}
+
+#registerbox p,
+#resetpasswordbox p {
+	font-size: 10pt;
+	padding-bottom: .5em;
+	color: #464646;
+}
+
+#registerbox p.instructions,
+#resetpasswordbox p.instructions {
+	padding-bottom: 2em;
+}
+
+#registerbox p label,
+#resetpasswordbox p label {
+	color: #464646;
+}
+
+#registerconfirmbox {
+	border: 1px solid #a9a9a9;
+	width: 350px;
+	margin: 0 auto;
+	padding: 1em 1em 0 1em;
+}
+
+#registerconfirmbox p {
+	color: #464646;
+	padding-bottom: 1em;
+}
+
+.registerconfirmelement {
+	float: left;
+	width: 120px;
+	font-weight: bold;
+}
+
+.registerconfirmvalue {
+	float: left;
+}
+
+#registerinstructionsbox {
+	border: 1px solid #a9a9a9;
+	width: 400px;
+	margin: 0 auto;
+	padding: 1em 1em 0 1em;
+}
+
+#registerinstructionsbox p {
+	color: #464646;
+	padding-bottom: 1em;
+}
+
+.registerdropdown,
+.resetpassworddropdown {
+	color: Black;
+	font-size: 10pt;
+}
+
+/* ****************************************************
+ * Menu bar
+ **************************************************** */
+
+#menubar {
+	width: 100%;
+	background-color: #003366;
+	color: White;
+}
+
+#menubar ul {
+	padding: .5em 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+#menubar ul li {
+	display: inline;
+	padding: 0 1em;
+}
+
+#menubar a:link		{ color: White; background-color: #003366; text-decoration: underline; }
+#menubar a:visited	{ color: White; background-color: #003366; text-decoration: underline; }
+#menubar a:hover	{ color: #003366; background-color: White; text-decoration: underline; }
+#menubar a:active	{ color: White; background-color: #003366; text-decoration: underline; }
+	
+/* ****************************************************
+ * My Messages, My Claims / My Referrals
+ **************************************************** */
+
+#mymessageswrapper,
+#mymemoswrapper,
+#myclaimswrapper,
+#myreferralswrapper,
+#myaccountwrapper {
+	font-size: 10pt;
+	font-weight: normal;
+	width: 700px;
+	color: #003366;
+	margin: 0 auto;
+}
+
+#myaccountwrapper {
+	width: 350px;
+}
+
+#mymessageswrapper h2,
+#mymemoswrapper h2,
+#myclaimswrapper h2,
+#myreferralswrapper h2,
+#myaccountwrapper h2 {
+	font-size: 14pt;
+	font-weight: bold;
+	width: 100%;
+	text-align: left;
+}
+	
+#mymessages,
+#mymemos,
+#myclaims,
+#myreferrals {
+	font-size: 10pt;
+	font-weight: normal;
+	color: black;
+	width: 700px;
+	margin: 0 auto;
+	border: 1px solid #003366;
+}
+
+.memo {
+	padding: 1em 0;
+	float: left;
+	text-align: center;
+	width: 140px;
+}
+
+#mymessages th,
+#myclaims th,
+#myreferrals th {
+	vertical-align: bottom;
+	padding: .5em;
+	background-color: #003366;
+	color: White;
+	font-weight: bold;
+}
+
+#mymessages td,
+#myclaims td,
+#myreferrals td {
+	padding: 2px .5em;
+}
+
+#mymessages tr.odd,
+#myclaims tr.odd,
+#myreferrals tr.odd {
+	background-color: White;
+}
+
+#mymessages tr.even,
+#myclaims tr.even,
+#myreferrals tr.even {
+	background-color: #A2B1BF;
+}
+
+#mymessages a:link		{ color: #003366; text-decoration: underline; }
+#mymessages a:visited	{ color: #003366; text-decoration: underline; }
+#mymessages a:hover		{ color: #003366; text-decoration: underline; }
+#mymessages a:active	{ color: #003366; text-decoration: underline; }
+
+#myclaims a:link		{ color: #003366; text-decoration: underline; }
+#myclaims a:visited		{ color: #003366; text-decoration: underline; }
+#myclaims a:hover		{ color: #003366; text-decoration: underline; }
+#myclaims a:active		{ color: #003366; text-decoration: underline; }
+
+#myreferrals a:link		{ color: #003366; text-decoration: underline; }
+#myreferrals a:visited	{ color: #003366; text-decoration: underline; }
+#myreferrals a:hover	{ color: #003366; text-decoration: underline; }
+#myreferrals a:active	{ color: #003366; text-decoration: underline; }
+
+#mymessages #nomessages {
+	width: 300px;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+	color: Red;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+
+#claimdetail1,
+#claimdetail2,
+#referraldetail1,
+#referraldetail2 {
+	font-size: 10pt;
+	font-weight: normal;
+	color: black;
+	width: 700px;
+	margin: 0 auto;
+	border: 1px solid #003366;
+}
+
+#claimdetail1 p,
+#referraldetail1 p {
+	padding: .5em 0;
+}
+
+#claimdetail1 label,
+#referraldetail1 label {
+	font-weight: bold;
+}
+
+#claimdetail1,
+#referraldetail1 {
+	padding: 1em 0;
+}
+
+#claimdetail2 th {
+	color: White;
+	background-color: #003366;
+	vertical-align: bottom;
+}
+
+#referraldetail2 th {
+	color: White;
+	background-color: #003366;
+	vertical-align: top;
+	padding: .5em 0;
+}
+
+#claimdetail2 td {
+	border-top: 1px solid #003366;
+	border-right: 1px solid #003366;
+	padding: .5em 0;
+}
+
+#referraldetail2 td {
+	padding: .5em .5em;
+}
+
+#referraldetail2 .border-contrast {
+	border-top: 1px solid White;
+}
+
+#referraldetail2 .border {
+	border-top: 1px solid #003366;
+}
+
+.more-details {
+	font-size: 9pt;
+	font-style: italic;
+}
+
+/* ****************************************************
+ * Nifty Rounded Corners
+ **************************************************** */
+
+div#niftydialog, div.niftydialog {
+	background-color: #cfcfcf;
+} 
+div.rounded div {
+  height: 1px;
+  overflow: hidden;
+}
+#radiusx, #radiusy {
+  text-align: right;
+  width: 30px;
+}
+
+/* ****************************************************
+ * Agreement
+ **************************************************** */
+#agreement {
+	border: 1px solid #003366;
+	padding: 1em;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#agreement div {
+	padding-bottom: 1em;
+}
+
+#agreement ol,
+#agreement ul {
+	padding-bottom: 1em;
+	margin-left: 3em;
+}
+

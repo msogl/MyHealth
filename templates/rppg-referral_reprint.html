@@ -1,0 +1,181 @@
+<style type="text/css">
+	td { font-size: 12pt; }
+	table.reprint td { padding-top: 6px; vertical-align: top; }
+	table.reprint-inner-table td { padding-top: 0; }
+	.reprint-label { font-weight: bold; }
+	.reprint-data { padding:0 1em 0 4px; text-decoration: none; }
+	#disclaimer-container { font-size: 10pt; margin: 0; padding: 0; }
+	.disclaimer { border: 1px solid black; padding: 2px 4px; margin: 0; }
+	.disclaimer p { margin: 0; padding: 2px 0; }
+	.rp-alternate { background-color: #e7e7e7; box-sizing: border-box; }
+
+	@media print {
+		.rp-alternate {
+			/* box-shadow does not add height, unlike border */
+			box-shadow: 0 1px 0 #e7e7e7 inset,
+						0 -1px 0 #e7e7e7 inset;
+			background-color: transparent;
+		}
+	}
+</style>
+<script type="text/javascript">
+	$('body').css('background-image', 'none');
+	$(document).ready(function() {
+		var ix=0;
+		$('table.reprint tr').not('table.reprint-inner-table tr').each(function() {
+			if (ix % 2 == 0) {
+				$(this).addClass('rp-alternate');
+			}
+			ix++;
+		});
+	});
+</script>
+<div id="wrapReprint" style="width:8.5in">
+	<div style="border:solid 3.0px black;padding:0;margin:0;font-size:14pt;font-weight:bold; text-align: center;">
+		<em>RESURRECTION PHYSICIANS PROVIDER GROUP, INC.</em><br/>
+		PATIENT REFERRAL AUTHORIZATION FORM<br/>
+	</div>
+	<div style="padding:.25em;margin:0;font-size:14pt;font-weight:bold;text-align: center;">
+		RPPG AUTHORIZATION: %%disposition_description%%
+	</div>
+	<div style="padding:.25em;margin:0;font-size:12pt;text-align: center;">
+		<span style="color:#f00;"><b>%%grace_period%%</b></span>
+		<p style="font-size:13pt;text-decoration:underline;font-weight:bold;padding:0;margin:0;">To schedule your appointment, please call %%referred_to_phone%%</u></strong><br /></p>
+		Go to http://www.resurrectionphysicians.com/myhealth to sign up to our patient portal to view and print referrals online!
+	</div>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="reprint">
+		<tr>
+			<td class="reprint-label">Authorization Number:</td>
+			<td class="reprint-data">%%ref_num%%</td>
+			<td class="reprint-label">Date:</td>
+			<td class="reprint-data nowrap">%%date_entered%%</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Primary Care Physician:</td>
+			<td class="reprint-data">
+				%%pcp_fullname%%<br />
+				%%pcp_address%%<br />
+				%%pcp_city%%, %%pcp_state%% %%pcp_zip%%
+			</td>
+			<td class="reprint-label">
+				Phone:<br />
+				Fax:
+			</td>
+			<td class="reprint-data">
+				%%pcp_phone%%<br />
+				%%pcp_fax%%
+			</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Referring Provider:</td>
+			<td class="reprint-data">
+				%%referring_fullname%%<br />
+				%%referring_address%%<br />
+				%%referring_city%%, %%referring_state%% %%referring_zip%%
+			</td>
+			<td class="reprint-label">
+				Phone:<br />
+				Fax:
+			</td>
+			<td class="reprint-data">
+				%%referring_phone%%<br />
+				%%referring_fax%%
+			</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Patient's Name:</td>
+			<td class="reprint-data">
+				%%member_last%%, %%member_first%%<br/>
+				%%member_street1%% %%member_street2%%<br/>
+				%%member_city%%, %%member_state%% %%member_zip%%
+			</td>
+			<td class="reprint-label">Date of Birth:<br />Phone:</td>
+			<td class="reprint-data">%%member_dob%%<br />%%member_phone%%</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Name of HMO:</td>
+			<td class="reprint-data">%%payor_name%%</td>
+			<td class="reprint-label">ID Number:<br>Group Number:</td>
+			<td class="reprint-data">%%member_id%%<br>%%employer_group_number%%</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Referral To:</td>
+			<td class="reprint-data">
+				%%referred_to_fullname%%<br />
+				%%referred_to_address%%<br />
+				%%referred_to_city%%, %%referred_to_state%% %%referred_to_zip%%
+			</td>
+			<td class="reprint-label">
+				Phone:<br />
+				Fax:
+			</td>
+			<td class="reprint-data">
+				%%referred_to_phone%%<br />
+				%%referred_to_fax%%
+			</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Diagnosis:</td>
+			<td class="reprint-data" colspan="3">
+				<table class="reprint-inner-table">
+					<tr>
+						<td>%%icd9_code%%</td>
+						<td style="padding-left:1em;">%%icd9_description%%</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Services Referred For:</td>
+			<td class="reprint-data">%%referred_for%%</td>
+			<td class="reprint-label">Number of Visits:</td>
+			<td class="reprint-data">%%num_visits%%</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">CPT Code:</td>
+			<td class="reprint-data" colspan="3">
+				<table class="reprint-inner-table">
+					<tr>
+						<td>%%cpt_code%%</td>
+						<td style="padding-left:1em;">%%cpt_description%%</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Referral&nbsp;Valid&nbsp;From:</td>
+			<td class="reprint-data nowrap">%%date_valid_from%%</td>
+			<td class="reprint-label">Referral&nbsp;Expires:</td>
+			<td class="reprint-data nowrap">%%date_valid_to%%</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">PCP/WPHCP Signature:</td>
+			<td class="reprint-data">
+				Electronically signed by:<br />
+				<span style="font-style:italic;">%%signature%%</span>
+			</td>
+			<td class="reprint-label">Date:</td>
+			<td class="reprint-data nowrap">%%date_entered%%</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Notes:</td>
+			<td class="reprint-data" colspan="3">%%notes%%</td>
+			</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Mailed Date:</td>
+			<td class="reprint-data nowrap">%%date_mailed%%</td>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="reprint-label">Approved Date:</td>
+			<td class="reprint-data nowrap">%%date_approved%%</td>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+	</table>
+
+	%%md_notes%%
+
+	%%disclaimer%%
+</div>
+

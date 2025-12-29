@@ -1,0 +1,485 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+  height: 100%;
+}
+
+#wrapReprint {
+  width: 90%;
+  text-align: left;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+A:link,
+A:active,
+A:visited {
+  color: #003366;
+  text-decoration: underline;
+}
+
+A:hover {
+  background-color: #003366;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+A.dialog:link,
+A.dialog:active,
+A.dialog:visited {
+  color: #003366;
+  text-decoration: underline;
+}
+
+A.dialog:hover {
+  background-color: #003366;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.menu {
+  background-color: #999999;
+  border: none;
+  padding: 2px;
+}
+
+.menutitle {
+  color: #ffffff;
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.menulinks {
+  color: #ffffff;
+  font-size: 9pt;
+  font-weight: normal;
+}
+
+A.menu:link {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+A.menu:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+A.menu:visited {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+A.menu:hover {
+  background-color: #ffffff;
+  color: #9a9a9a;
+  text-decoration: none;
+}
+
+.dialog {
+  background-color: #A2B1BF;
+  color: #000000;
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.pagetitle {
+  color: #000000;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.messagetitle {
+  color: #003366;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.messagedate {
+  color: #999999;
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.messagebody {
+  color: #000000;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.dashboardtitle,
+.reviewnotice {
+  color: #003366;
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.reviewnotice {
+  margin: 0;
+  padding: 0;
+}
+
+
+span.required {
+  color: #ff0000;
+}
+
+.text {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-serif;
+  font-size: 8pt;
+  font-weight: normal;
+}
+
+.menulines {
+  background-color: White;
+}
+
+.menulines_sticky {
+  background-color: #A2B1BF;
+}
+
+.columndata,
+.columnfiledata {
+  /* color: #000000; */
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-serif;
+  font-size: 8pt;
+  font-weight: normal;
+}
+
+.columnfiledata {
+  line-height: 24px;
+  vertical-align: middle;
+}
+
+.columnheader,
+.columnfileheader {
+  background-color: #003366;
+  color: #ffffff;
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-serif;
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.columnfileheader {
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+A.columnheader:link,
+A.columnheader:active,
+A.columnheader:visited {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+A.columnheader:hover {
+  background-color: #ffffff;
+  color: #003366;
+  text-decoration: none;
+}
+
+.sectiontitle {
+  background-color: #003366;
+  color: #ffffff;
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.errormsg {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-serif;
+  font-size: 8pt;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.smallboldblue {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-Serif;
+  font-size: 8pt;
+  font-weight: bold;
+  color: #003366;
+}
+
+.sidebar {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-Serif;
+  font-size: 10pt;
+  font-weight: normal;
+  padding-left: 4px;
+  padding-right: 7px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.pbody {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-Serif;
+  font-size: 10pt;
+  font-weight: normal;
+  margin: 0;
+  text-align: justify;
+}
+
+.midcolumn {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-Serif;
+  font-size: 10pt;
+  font-weight: normal;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.edittd {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 10pt;
+  font-weight: normal;
+  vertical-align: top;
+  padding: 1px;
+}
+
+.edittable {
+  border: solid #445599 1px;
+  border-collapse: collapse;
+  background-color: #B6C3F2;
+}
+
+.button {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Geneva, Helv, Sans-serif;
+  font-size: 8pt;
+  font-weight: normal;
+  width: 80px;
+  border: solid black 1px;
+  background-color: #003366;
+  color: White;
+  outline: none;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+}
+
+td {
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+td.custom {
+  line-height: 1.5em;
+}
+
+.textbox {
+  background-color: #ffffff;
+  color: Black;
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 8pt;
+  font-weight: normal;
+  border: solid black 1px;
+}
+
+.radio {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 8pt;
+  font-weight: bold;
+  /* margin-left: -1em; */
+}
+
+.radioLabel {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 8pt;
+  font-weight: bold;
+  position: relative;
+  top: -2px;
+  left: -2px;
+}
+
+.fieldarea {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 8pt;
+  font-weight: bold;
+  background-color: #ffffff;
+  border: none;
+  color: #003366;
+}
+
+.checkbox {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 8pt;
+  font-weight: normal;
+  color: Black;
+}
+
+.checkboxLabel {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 8pt;
+  font-weight: bold;
+  position: relative;
+  top: -2px;
+  left: -2px;
+}
+
+#overlay {
+  visibility: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+  background-image: url(images/transparentoverlay.gif);
+}
+
+#overlay #popupspec,
+#overlay #popupaddr {
+  padding: 4px;
+  border: solid 1px Black;
+  background-color: #A2B1BF;
+  color: #000000;
+}
+
+#overlay #popup,
+#overlay #popupspec,
+#overlay #popupaddr,
+#overlay #popupelig,
+#overlay #popupbenefits {
+  padding: 4px;
+  border: solid 1px Black;
+  background-color: #A2B1BF;
+  color: #000000;
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+#overlay #popupbenefits {
+  height: 400px;
+}
+
+#popupbenfitsscrollable {
+  margin: .5em 0;
+  background-color: White;
+  border: 1px solid black;
+  height: 330px;
+  overflow: auto;
+}
+
+.popupdialog {
+  font-family: Verdana, Tahoma, Arial, Helvetica, Helv, Geneva, Sans-Serif;
+  font-size: 10pt;
+  font-weight: normal;
+  color: Black;
+}
+
+A.tab:link,
+A.tab:visited,
+A.tab:hover,
+A.tab:active {
+  color: #134174;
+  text-decoration: none;
+  background-color: #A2B1BF;
+}
+
+.tabLine {
+  border-bottom: 1px solid #003366;
+}
+
+.tabHighlight {
+  border-top: 2px solid #003366;
+  border-bottom: none;
+  border-left: 1px solid #003366;
+  border-right: 1px solid #003366;
+}
+
+.tabNormal {
+  border: 1px solid #003366;
+}
+
+#contentAddress,
+#contentOtherIns {
+  position: absolute;
+  top: 49px;
+  left: 5%;
+  width: 90%;
+  height: 150px;
+  border-left: 1px solid #134174;
+  border-right: 1px solid #134174;
+  border-bottom: 1px solid #134174;
+  padding-top: 4px;
+}
+
+#tabButtons {
+  position: absolute;
+  top: 210px;
+  text-align: right;
+  right: 5%;
+}
+
+
+/* Table-less layout */
+
+div#wrapouter {
+  /* background-color: #9a9a9a; */
+  width: 100%;
+  /* overflow: visible; */
+}
+
+div#menu {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+div#wrapcontent {
+  background-color: White;
+  margin-left: 180px;
+  overflow: auto;
+}
+
+div#content {
+  position: relative;
+  width: 620px;
+  margin: 0 auto;
+}
+
+.nowrap {
+  white-space: no-wrap;
+}
+
+/* NIFTY ROUNDED CORNERS */
+
+div#niftydialog,
+div.niftydialog {
+  background-color: #A2B1BF;
+}
+
+div.rounded div {
+  height: 1px;
+  overflow: hidden;
+}
+
+#radiusx,
+#radiusy {
+  text-align: right;
+  width: 30px;
+}
+
+#buttons {
+  font-size: 12pt;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}

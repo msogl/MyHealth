@@ -1,0 +1,136 @@
+/**
+ * MFA select page
+ */
+#mfa-options {
+  width: 400px;
+  margin: 2em auto 3em auto;
+  max-width: 100%;
+}
+
+.send-to {
+  display: grid;
+  height: 100px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  text-align: center;
+  align-items: center;
+  align-content: space-evenly;
+  margin-bottom: 4px;
+}
+
+.send-to:hover,
+.send-to.active {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.send-to .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/**
+ * Verify page
+ */
+.mfa-code-container {
+  justify-content: flex-start;
+  column-gap: 4px;
+}
+
+.mfa-code {
+  box-sizing: border-box;
+  height: 36px !important;
+  line-height: 36px;
+  font-size: 22px;
+  width: 120px !important;
+  padding: 0 6px !important;
+  border: 1px solid #999;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+}
+
+input[type="text"] {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.btn-large {
+  height: 32px;
+  font-size: 16px;
+}
+
+#expire-time {
+  font-weight: bold;
+  font-size: large;
+  color: #080;
+}
+
+/**
+ * TOTP pages
+ */
+.qrcode {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.code-entry {
+  margin-bottom: 1rem;
+}
+
+.code-entry input {
+  font-size: 22px;
+  color: #333;
+  border: 1px solid #ccc !important;
+  outline: none;
+  text-align: center;
+}
+
+.qrcode input[type="submit"] {
+  width: 100%;
+}
+
+#errormsg {
+  color: #f00;
+  display: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  margin: 0;
+}
+
+#instructions {
+  margin: 0 auto 1em auto;
+  text-align: left;
+}
+
+.fa-copy:hover {
+  cursor: pointer;
+}
+
+#copied-notify {
+  display: none;
+  position: absolute;
+  width: 100px;
+  left: calc(50% - 50px);
+  margin: -4.75em auto 0 auto;
+  background-color: #BDF1BD;
+  color: #0A6B0A;
+  padding: 4px 6px;
+  border-radius: 6px;
+  position: absolute;
+  left: calc(50% - 50px);
+  z-index: 1000;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+}

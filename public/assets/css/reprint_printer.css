@@ -1,0 +1,31 @@
+@media print {
+  body {
+    font-family: Times New Roman, Roman, Serif;
+    font-size: 10pt;
+    font-weight: normal;
+  }
+
+  #wrapReprint {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  td {
+    font-size: 10pt;
+    font-weight: normal;
+  }
+
+  td.custom {
+    line-height: 1.5em;
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  #overlay {
+    display: none
+  }
+}
