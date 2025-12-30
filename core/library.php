@@ -169,7 +169,7 @@ function ReadTemplateFromPath($filename, $templatePath=null)
 		$templatePath = 'templates/';
 
         // Try first with client-specific template
-        $client = strtolower(client());
+        $client = strtoupper(client());
         $filePath = fixpath(APPPATH."/{$templatePath}/{$client}/{$filename}");
         $pathOk = file_exists($filePath);
     }
