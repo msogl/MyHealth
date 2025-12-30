@@ -178,6 +178,10 @@ function ReadTemplateFromPath($filename, $templatePath=null)
         $filePath = fixpath(APPPATH."/{$templatePath}/{$filename}");
     }
 
+    if (!file_exists($filePath)) {
+        return '';
+    }
+
     $contents = file_get_contents($filePath);
     return mb_convert_encoding($contents, 'UTF-8', mb_detect_encoding($contents, 'UTF-8, ISO-8859-1', true));
 }
