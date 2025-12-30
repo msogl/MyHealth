@@ -31,11 +31,6 @@
         <?php require_once $view; ?>
     </div>
 
-    <?php
-    if ($_security['gpc_enabled']) {
-        component('global-privacy-control');
-    }
-    ?>
     <?php if (!guest()) { ?>
     <script src="<?=_asset('js/shared/IdleTimer.js')?>"></script>
     <?php } ?>

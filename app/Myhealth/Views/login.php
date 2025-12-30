@@ -42,6 +42,11 @@
     </div>
     <?php } ?>
 </div>
+<?php
+if ($_security['gpc_enabled']) {
+    component('global-privacy-control');
+}
+?>
 
 <script type="text/javascript">
     <?php if ($rememberedUser != "") { ?>
