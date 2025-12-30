@@ -7,8 +7,8 @@
 *.bak
 *.asp.*
 *.php.*
-*.html
-*.txt
+*.html.*
+*.txt.*
 !robots.txt
 *.zip
 *OBSOLETE*
@@ -38,9 +38,6 @@ public/docs/*
 !public/docs/*NewsLetter*.pdf
 
 services/*
-templates/*
-!templates/*.html
-!templates/*.txt
 
 test/*
 tmp/*
