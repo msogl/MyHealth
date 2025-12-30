@@ -26,15 +26,26 @@ class AccountModel extends BaseModel
 		$sql = "SELECT * FROM Accounts WHERE AccountID = ?";
 		$rs = $this->db->GetRecords($this->db->QCMembersDB, $sql, [$id]);
 		$this->dao = (!$rs->EOF ? $this->db->wrappers($rs, $this->daoName, true) : null);
+
+        if (is_null($this->dao)) {
+            return null;
+        }
+        
         $this->addSMSNumber();
 		return $this->dao;
 	}
 
 	public function getByUsername($Username)
 	{
+
 		$sql = "SELECT * FROM Accounts WHERE Username = ?";
 		$rs = $this->db->GetRecords($this->db->QCMembersDB, $sql, [$Username]);
 		$this->dao = (!$rs->EOF ? $this->db->wrappers($rs, $this->daoName, true) : null);
+
+        if (is_null($this->dao)) {
+            return null;
+        }
+
         $this->addSMSNumber();
 		return $this->dao;
 	}
