@@ -427,7 +427,8 @@
 
     VitalStats.debug('after charting');
     VitalStats.debug(VitalStats.plots.length + ' charts');
-    $(window).on('resize', function() {
+
+    window.addEventListener('resize', function() {
         VitalStats.debug(`resizing ${VitalStats.plots.length} charts`);
         for (var ix = 0; ix < VitalStats.plots.length; ix++) {
             VitalStats.plots[ix].replot({
