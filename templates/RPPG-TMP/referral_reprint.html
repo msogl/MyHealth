@@ -18,18 +18,6 @@
 		}
 	}
 </style>
-<script type="text/javascript">
-	$('body').css('background-image', 'none');
-	$(document).ready(function() {
-		var ix=0;
-		$('table.reprint tr').not('table.reprint-inner-table tr').each(function() {
-			if (ix % 2 == 0) {
-				$(this).addClass('rp-alternate');
-			}
-			ix++;
-		});
-	});
-</script>
 <div id="wrapReprint" style="width:8.5in">
 	<div style="border:solid 3.0px black;padding:0;margin:0;font-size:14pt;font-weight:bold; text-align: center;">
 		<em>RESURRECTION PHYSICIANS PROVIDER GROUP, INC.</em><br/>
@@ -179,3 +167,13 @@
 	%%disclaimer%%
 </div>
 
+<script type="text/javascript">
+  let ix=0;
+  const rows = document.querySelectorAll('table.reprint tr:not(table.reprint-inner-table tr)');
+  rows.forEach(row => {
+    if (ix % 2 == 0) {
+      row.classList.add('rp-alternate');
+    }
+    ix++;
+  })
+</script>
