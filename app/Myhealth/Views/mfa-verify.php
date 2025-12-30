@@ -23,7 +23,7 @@
         <input type="hidden" name="s" value="<?=_WValue(Request('s'))?>">
         <p>Enter the code you received in your <?=($viasms ? 'text message' : 'email')?></p>
         <div class="flex-middle gap-x-4px">
-            <input type="number" id="mfa-code" class="mfa-code" name="code" min="0" max="999999">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" id="mfa-code" class="mfa-code" name="code">
             <button type="button" id="submit-btn" class="button btn-large">Submit</button>
         </div>
         <?php if ($trustBrowserEnabled) { ?>

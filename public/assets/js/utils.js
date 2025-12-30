@@ -615,103 +615,29 @@ function isBrowserReload() {
     performance.navigation?.type === 1; // fallback for old browsers
 }
 
-var typewatch = (function(){
-	var timer = 0;
-	return function(callback, ms){
-		clearTimeout(timer);
-		timer = setTimeout(callback, ms);
-	};
-})();
+/**
+ * Limits input to numeric only.
+ * @param {string} key - Key pressed
+ * @param {bool} allowFloat - default false
+ */
+function isNumericKey(key, allowFloat) {
+  if (key == '.' && !allowFloat) {
+    return false;
+  }
 
+  return (key.match(/[0-9]/) != null);
+}
 
+function isControlKey(key, ctrlPressed) {
+  let controlKeys = ['Backspace', 'Delete', 'Home', 'End', 'ArrowLeft', 'ArrowRight'];
+  if (controlKeys.includes(key)) {
+    return true;
+  }
 
-if (typeof jQuery != 'undefined') {
-	(function($){
-		$.fn.limitNumeric = function(allowFloat) {
-			var ctrlDown = false,
-				shiftDown = false,
-				ctrlKey = 17,
-				shiftKey = 16,
-				cmdKey = 91,
-				cKey = 67,
-				vKey = 86;
-	
-			//               regular number keys and period	       numeric keypad keys and period
-			var validKeys = [48,49,50,51,52,53,54,55,56,57,110,	   96,97,98,99,100,101,102,103,104,105,190];
-			var controlKeys = [8,9,13,33,34,35,36,37,39,46];
-	
-			this.on("keydown", function(e) {
-				if (e.keyCode == ctrlKey || e.keyCode == cmdKey) {
-					//console.log("Ctrl down");
-					ctrlDown = true;
-				}
-				
-				if (e.keyCode == shiftKey) {
-					shiftDown = true;
-				}
-	
-				//console.log("in keydown, keycode = " + e.keyCode);
-				var key = (e.which ? e.which : e.keyCode);
-				//console.log(key);
-	
-				// allow certain other keys like backspace, tab, enter, delete
-				if (controlKeys.indexOf(key) > -1) {
-					return true;
-				}
-	
-				//console.log("ctrlDown = " + ctrlDown);
-	
-				if ((ctrlDown && key == cKey) ||
-					(ctrlDown && key == vKey)) {
-					//console.log("Ctrl-C or Ctrl-V okay");
-					return true;
-				}
-	
-				if (ctrlDown) {
-					//console.log("No other Ctrl key combination is accepted");
-					e.preventDefault();
-					return false;
-				}
-				
-				if (shiftDown) {
-					e.preventDefault();
-					return false;
-				}
-	
-				//console.log("Looking for " + key);
-				if (validKeys.indexOf(key) > -1) {
-					if (!allowFloat && (key == 110 || key == 190)) {
-						e.preventDefault();
-						return false;
-					}		
-					
-					//console.log(key+" is valid")
-					if ((key == 110 || key == 190) && this.value.indexOf(".") > -1) {
-						//console.log("field already has a decimal");
-						e.preventDefault();
-						return false;
-					}
-					return true;
-				}
-				
-				e.preventDefault();
-			});
-	
-			this.on("keyup", function(e) {
-				if (e.keyCode == ctrlKey || e.keyCode == cmdKey) {
-					//console.log("Ctrl up");
-					ctrlDown = false;
-				}
-				
-				if (e.keyCode == shiftKey) {
-					shiftDown = false;
-				}
-			});
-		};
-	})(jQuery);
+  // Allow for ctrl-c (copy), ctrl-v (paste), ctrl-x (cut), ctrl-a (select all)
+  if (ctrlPressed && ['c', 'v', 'x' ,'a'].includes(key)) {
+    return true;
+  }
 
-	jQuery.Event.prototype.stop = function() {
-		this.preventDefault();
-		this.stopPropagation();
-	}
+  return false;
 }

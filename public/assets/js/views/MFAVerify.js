@@ -26,11 +26,11 @@ const MFAVerify = {
     const self = this;
 
     document.getElementById('mfa-code')?.addEventListener('keydown', function(e) {
-      if (e.key == '.') {
-        e.preventDefault();
+      if (isControlKey(e.key, e.ctrlKey)) {
+        return;
       }
 
-      if (e.key.match(/[0-9]/) && this.value.length >= 6) {
+      if (!isNumericKey(e.key, false) || this.value.length >= 6) {
         e.preventDefault();
       }
     });
