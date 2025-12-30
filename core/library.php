@@ -163,18 +163,23 @@ function ReadTemplate($filename)
 
 function ReadTemplateFromPath($filename, $templatePath=null)
 {
+    $pathOk = false;
+
 	if (_isNE($templatePath)) {
 		$templatePath = 'templates/';
-	}
 
-	$filePath = realpath(APPPATH.'/'.$templatePath).'/'.$filename;
+        // Try first with client-specific template
+        $client = strtolower(client());
+        $filePath = fixpath(APPPATH."/{$templatePath}/{$client}/{$filename}");
+        $pathOk = file_exists($filePath);
+    }
 
-	if (file_exists($filePath)) {
-		$contents = file_get_contents($filePath);
-		return mb_convert_encoding($contents, 'UTF-8', mb_detect_encoding($contents, 'UTF-8, ISO-8859-1', true));
-	}
+    if (!$pathOk) {
+        $filePath = fixpath(APPPATH."/{$templatePath}/{$filename}");
+    }
 
-	return '';
+    $contents = file_get_contents($filePath);
+    return mb_convert_encoding($contents, 'UTF-8', mb_detect_encoding($contents, 'UTF-8, ISO-8859-1', true));
 }
 
 function TemplateExists($filename, $templatePath=null)

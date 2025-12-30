@@ -449,10 +449,7 @@ function ShowDisclaimer()
 	$disclaimer = '';
 
 	if (!$isError) {
-		$disclaimer = ReadTemplate(strtolower($client).'-disclaimer.html');
-		if ($disclaimer == '') {
-			$disclaimer = ReadTemplate("disclaimer.html");
-		}
+		$disclaimer = ReadTemplate('disclaimer.html');
 		$disclaimer = str_replace("%%printwidth%%", $printWidth, $disclaimer);
 	}
 
@@ -583,7 +580,7 @@ function DoReferral()
 	global $oCommon, $db, $client, $printWidth, $UseSpecialAddress, $Heading, $isError, $ReprintType;
 	global $orReferral, $orDetail, $orMember, $orReferredTo, $orAddress;
 
-	$template = ReadTemplate(strtolower($client)."-referral_reprint.html");
+	$template = ReadTemplate("referral_reprint.html");
 
 	if ($template != "") {
 		$template = str_replace("%%company_name%%", $oCommon->getDBName(), $template);
@@ -870,7 +867,7 @@ function DoAuthorization()
 	global $oCommon, $db, $client, $printWidth, $Heading, $ReprintType;
 	global $orReferral, $orDetail, $orMember, $orReferring, $orReferredTo;
 
-	$template = ReadTemplate(strtolower($client)."-auth_reprint.html");
+	$template = ReadTemplate("auth_reprint.html");
 
 	if ($template != "") {
 		$template = str_replace("%%company_name%%", $oCommon->getDBName(), $template);

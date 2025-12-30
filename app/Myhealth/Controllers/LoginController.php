@@ -190,14 +190,7 @@ class LoginController
         }
 
         _session_put('login_state', LoginState::AGREEMENT_REQUIRED);
-        $client = client(); 
-
-        $template = strtolower($client).'-agreement.html';
-        if (!templateExists($template)) {
-            $template = 'agreement.html';
-        }
-
-        $contents = ReadTemplate($template);
+        $contents = ReadTemplate('agreement.html');
 
         View::render('agreement', 'Agreement', ['client' => $client, 'contents' => &$contents]);
     }
