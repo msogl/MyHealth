@@ -6,7 +6,8 @@
 use \Myhealth\Classes\Config;
 use \Myhealth\Core\PRG;
 
-ini_set('display_errors', 1);
+
+ini_set('display_errors', 'Off');
 ini_set('error_reporting', E_ALL);
 ini_set('session.gc_maxlifetime', (60*60*1));		// 1 hours
 
@@ -37,7 +38,7 @@ define('SPACER', '&nbsp;&nbsp;&nbsp;&nbsp;');
 define('SELECTED', ' selected');
 define('CHECKED', ' checked');
 define('DEMOMODE', true);
-define('ERRORDISPLAYMODE', 'DEV');
+define('ERRORDISPLAYMODE', 'PROD');
 
 $GLOBALS['appRoot'] = '';	// Normally current directory, but can be overridden
 
